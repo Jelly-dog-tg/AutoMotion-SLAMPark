@@ -99,9 +99,6 @@ flowchart TD
 
 ![P6 controller comparison](results/p6_controller_comparison.png)
 
-**Robustness under five perturbation classes (P8, 5/5 PASS)**
-
-![P8 robustness trajectories](results/p8_robustness_trajectories.png)
 
 **Incremental LiDAR SLAM map (P9.5.3)**
 
