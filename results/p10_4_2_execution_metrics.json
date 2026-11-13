@@ -1,0 +1,100 @@
+{
+  "stage": "P10.4.2 autonomous execution of P10.4.1 live-SLAM Hybrid A* path",
+  "status": "FULL_AUTONOMOUS_PARKING_SUCCESS",
+  "source_map": "results\\p10_4_1_exploration_map.npz",
+  "source_path": "results\\p10_4_1_live_plan.npz",
+  "resume_pose_source": "P10.4.1 saved handoff: SLAM pose for control, reference pose for simulation physics only",
+  "controller_start_pose": [
+    13.57756803491671,
+    9.830308249641929,
+    0.4191344114073744
+  ],
+  "simulation_physics_resume_pose": [
+    13.531735890273879,
+    9.727205140415622,
+    0.4190432213556006
+  ],
+  "initial_localization_error_m": 0.1128310091007488,
+  "requested_goal_pose": [
+    10.5,
+    15.3,
+    -1.5707963267948966
+  ],
+  "path_direction_segments": [
+    -1,
+    1,
+    -1
+  ],
+  "path_segment_count": 3,
+  "path_point_count": 225,
+  "path_length_m": 11.187847941062339,
+  "live_slam_map_updated_during_execution": true,
+  "ground_truth_used_for_planning": false,
+  "ground_truth_used_for_control": false,
+  "ground_truth_used_for_simulation_and_collision_audit": true,
+  "controller_pose_source": "OnlineSLAM2D + wheel-odometry extrapolation",
+  "controller": "direction-aware Stanley + PID speed + GearManager",
+  "initial_gear_direction": -1,
+  "gear_switches_completed": 2,
+  "lidar_scans_during_execution": 154,
+  "total_lidar_scans_including_handoff": 208,
+  "control_steps": 1262,
+  "execution_duration_s": 63.1,
+  "collision_in_physical_map": false,
+  "collision_in_saved_slam_map": false,
+  "path_collision_free_on_saved_slam_map": true,
+  "path_collision_free_in_simulated_physical_map": true,
+  "map_collision_samples": [],
+  "physical_collision_samples": [],
+  "localization_translation_rmse_m": 0.16739784894135087,
+  "localization_heading_rmse_deg": 0.5381952774522384,
+  "estimated_cross_track_rmse_m": 0.03392688477604775,
+  "final_true_pose": [
+    10.36691614921876,
+    15.181294704266078,
+    -1.531564110915057
+  ],
+  "final_slam_pose": [
+    10.430810163237027,
+    15.387976795989083,
+    -1.5318234980417074
+  ],
+  "final_estimated_position_error_to_requested_goal_m": 0.1119247521497879,
+  "final_estimated_heading_error_deg": 2.232978603243843,
+  "final_simulated_true_position_error_to_requested_goal_m": 0.17833187761598182,
+  "final_simulated_true_heading_error_deg": 2.247840390860931,
+  "final_speed_mps": 0.0,
+  "parked_stop_confirmed": true,
+  "segments": [
+    {
+      "segment_index": 0,
+      "direction": -1,
+      "direction_name": "reverse",
+      "duration_s": 14.25,
+      "tracking_points": 286,
+      "cross_track_rmse_m": 0.010030815841210499,
+      "endpoint_error_m": 0.031959684872164336,
+      "reached_endpoint": true
+    },
+    {
+      "segment_index": 1,
+      "direction": 1,
+      "direction_name": "forward",
+      "duration_s": 7.300000000000001,
+      "tracking_points": 147,
+      "cross_track_rmse_m": 0.07228779167315903,
+      "endpoint_error_m": 0.04643099211436889,
+      "reached_endpoint": true
+    },
+    {
+      "segment_index": 2,
+      "direction": -1,
+      "direction_name": "reverse",
+      "duration_s": 40.45,
+      "tracking_points": 810,
+      "cross_track_rmse_m": 0.027972781440079184,
+      "endpoint_error_m": 0.022994023270654546,
+      "reached_endpoint": true
+    }
+  ]
+}

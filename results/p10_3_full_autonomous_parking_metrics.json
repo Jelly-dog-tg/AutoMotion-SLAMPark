@@ -1,0 +1,96 @@
+{
+  "stage": "P10.3 full closed-loop parking with live SLAM feedback",
+  "status": "FULL_PARKING_SUCCESS",
+  "path_source": "results\\p10_1_slam_map_planning_path.npz",
+  "map_prior_source": "results\\p9_5_3_keyboard_map.npz",
+  "sensor_simulation_source": "270-degree LiDAR ray-cast against saved SLAM occupancy map",
+  "controller_pose_source": "OnlineSLAM2D + wheel-odometry extrapolation",
+  "live_slam_map_updated_during_execution": true,
+  "reverse_planning_uses_saved_map_snapshot": true,
+  "ground_truth_used_for_control": false,
+  "ground_truth_used_for_simulation_and_collision_audit": true,
+  "forward_reference_points": 113,
+  "reverse_reference_points": 145,
+  "control_steps": 1006,
+  "elapsed_sim_time_s": 50.300000000000004,
+  "lidar_scans": 126,
+  "slam_update_status": {
+    "BOOTSTRAP": 1,
+    "ODOM_FALLBACK": 17,
+    "ICP_ACCEPT": 108
+  },
+  "gear_switches": 1,
+  "gear_shift_completed": true,
+  "collision_in_physical_map": false,
+  "collision_in_static_slam_map_snapshot": false,
+  "slam_map_collision_audit_resolution_m": 0.05,
+  "reverse_planner_grid_resolution_m": 0.1,
+  "reverse_planner_obstacle_inflation_m": 0.1,
+  "unknown_cells_treated_as_occupied": true,
+  "localization_translation_rmse_m": 0.14100582748695292,
+  "localization_heading_rmse_deg": 2.0433591126739667,
+  "estimated_cross_track_rmse_m": 0.03932843661177913,
+  "final_true_pose": [
+    10.679639980008394,
+    15.242743434611311,
+    -1.660118727271299
+  ],
+  "final_slam_pose": [
+    10.659707383043571,
+    15.257927022819615,
+    -1.6211614691019383
+  ],
+  "requested_goal_pose": [
+    10.5,
+    15.3,
+    -1.5707963267948966
+  ],
+  "effective_target_pose": [
+    10.675,
+    15.3,
+    -1.5707963267948966
+  ],
+  "target_x_adjustment_m": 0.175,
+  "final_position_error_to_effective_target_m": 0.05744426598527965,
+  "final_position_error_to_requested_goal_m": 0.18854399141188663,
+  "final_heading_error_deg": 5.11779656327519,
+  "ground_truth_evaluation_passed": true,
+  "final_speed_mps": 0.0,
+  "parked_stop_confirmed": true,
+  "reverse_replan_after_forward_segment": {
+    "start_pose_from_live_slam": [
+      11.786737863268582,
+      8.432332292900046,
+      -0.8990974736466729
+    ],
+    "raw_path_points": 10,
+    "resampled_reverse_points": 145,
+    "expanded_nodes": 88,
+    "reverse_path_length_m": 7.196273915162759,
+    "first_motion_direction": -1,
+    "planner_map_source": "saved P9.5.3 SLAM map snapshot",
+    "planner_grid_resolution_m": 0.1,
+    "obstacle_inflation_m": 0.1
+  },
+  "segments": [
+    {
+      "segment": "forward",
+      "direction": 1,
+      "duration_s": 15.65,
+      "tracking_points": 314,
+      "cross_track_rmse_m": 0.024282024814508717,
+      "endpoint_error_m": 0.04384206919880245,
+      "stopped_before_shift": true
+    },
+    {
+      "segment": "reverse",
+      "direction": -1,
+      "duration_s": 34.0,
+      "tracking_points": 681,
+      "cross_track_rmse_m": 0.044867386469122826,
+      "endpoint_error_m": 0.044766053457919716,
+      "heading_error_deg": 2.8857100887692755,
+      "stopped_at_goal": true
+    }
+  ]
+}

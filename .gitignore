@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.vscode/
+third_party/
+timings_*.json
+*.docx
+_report_extract.txt
+results/**/*.npz
+!results/p11_7_9/final_run/p11_7_9_parking_path.npz

@@ -1,0 +1,43 @@
+{
+  "planning_status": "SUCCESS",
+  "closed_loop_status": "SUCCESS",
+  "expanded_nodes": 2518,
+  "reference_path_points": 129,
+  "path_length_m": 12.792,
+  "simulation_steps": 627,
+  "simulation_duration_s": 31.35,
+  "gear_switches": 1,
+  "final_x_m": 10.5227,
+  "final_y_m": 15.2563,
+  "final_yaw_deg": -89.645,
+  "final_speed_mps": 0.0,
+  "final_position_error_m": 0.0492,
+  "final_heading_error_deg": 0.355,
+  "cross_track_rmse_m": 0.0221,
+  "cross_track_max_m": 0.0557,
+  "max_steering_deg": 35.0,
+  "max_speed_mps": 0.5,
+  "collision_free": true,
+  "segments": [
+    {
+      "direction": 1,
+      "steps": 241,
+      "duration": 12.050000000000036,
+      "reached_endpoint": true,
+      "max_abs_cross_track_error": 0.0556685296201216,
+      "rms_cross_track_error": 0.017247050013490903,
+      "max_abs_steering_deg": 35.0,
+      "final_endpoint_distance": 0.047189397654850584
+    },
+    {
+      "direction": -1,
+      "steps": 377,
+      "duration": 18.850000000000268,
+      "reached_endpoint": true,
+      "max_abs_cross_track_error": 0.04684749626372649,
+      "rms_cross_track_error": 0.023742271150470517,
+      "max_abs_steering_deg": 35.0,
+      "final_endpoint_distance": 0.010353201683254955
+    }
+  ]
+}

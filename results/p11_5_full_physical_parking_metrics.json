@@ -1,0 +1,560 @@
+{
+  "stage": "P11.4.2-P11.5 complete physical autonomous parking",
+  "status": "PASS",
+  "checks": {
+    "all_segments_executed": true,
+    "all_segments_completed": true,
+    "both_shifts_completed": true,
+    "shifts_stopped": true,
+    "shifts_have_hold": true,
+    "no_collision": true,
+    "body_inside_with_margin": true,
+    "all_four_tires_inside": true,
+    "final_pose_matches_reference": true,
+    "final_heading_matches_reference": true,
+    "final_pose_matches_bay_goal": true,
+    "final_heading_matches_bay": true,
+    "final_speed_zero_within_tolerance": true,
+    "held_inside_bay_for_2s": true,
+    "tracking_cross_track": true,
+    "tracking_heading": true,
+    "no_pose_reset_or_external_motion": true,
+    "baseline_preserved": true,
+    "state_machine_complete": true
+  },
+  "limits": {
+    "reference_final_position_m": 0.1,
+    "reference_final_heading_deg": 3.0,
+    "requested_goal_position_m": 0.25,
+    "requested_goal_heading_deg": 5.0,
+    "bay_body_margin_m": 0.03,
+    "final_abs_speed_mps": 0.01,
+    "final_hold_s": 2.0,
+    "gear_engagement_abs_speed_mps": 0.015,
+    "min_segment_completion_percent": 98.0,
+    "max_cross_track_m": 0.15,
+    "max_heading_error_deg": 6.0,
+    "max_roll_pitch_deg": 5.0,
+    "max_collision_episodes": 0,
+    "max_execution_s": 180.0
+  },
+  "failure_reason": null,
+  "total_physics_time_s": 68.53333333335317,
+  "physics_hz": 240,
+  "control_hz": 240,
+  "segment_results": [
+    {
+      "segment": 0,
+      "direction": -1,
+      "reference_indices": [
+        0,
+        286
+      ],
+      "reference_length_m": 2.4124229884448556,
+      "completed": true,
+      "completion_percent": 99.70003937554178,
+      "rms_cte_m": 0.0006634908074654124,
+      "max_abs_cte_m": 0.0009159043974474039,
+      "max_abs_heading_deg": 0.051599355280431636,
+      "minimum_signed_speed_mps": -0.18783187668418916,
+      "maximum_signed_speed_mps": -6.882615913429817e-06,
+      "end_event": {
+        "segment": 0,
+        "direction": -1,
+        "start_time_s": 2.8500000000000365,
+        "end_time_s": 17.237499999999343,
+        "actual_pose": [
+          11.179271769167528,
+          9.470099110414791,
+          -0.20001393916986987
+        ],
+        "reference_pose": [
+          11.172005063005539,
+          9.47067857687598,
+          -0.20266879044445124
+        ],
+        "progress_percent": 99.70003937554178,
+        "stop_speed_mps": -1.4685558704166142e-05
+      }
+    },
+    {
+      "segment": 1,
+      "direction": 1,
+      "reference_indices": [
+        298,
+        444
+      ],
+      "reference_length_m": 1.584730056912747,
+      "completed": true,
+      "completion_percent": 99.76915784446838,
+      "rms_cte_m": 0.005896063626886203,
+      "max_abs_cte_m": 0.0095637939324444,
+      "max_abs_heading_deg": 0.40431330723508124,
+      "minimum_signed_speed_mps": -4.255054682673231e-06,
+      "maximum_signed_speed_mps": 0.2539974508420132,
+      "end_event": {
+        "segment": 1,
+        "direction": 1,
+        "start_time_s": 19.520833333332547,
+        "end_time_s": 27.095833333332116,
+        "actual_pose": [
+          12.619761631932358,
+          8.858139164963095,
+          -0.6062146344090507
+        ],
+        "reference_pose": [
+          12.617266137339152,
+          8.848216677379446,
+          -0.6136465429917859
+        ],
+        "progress_percent": 99.76915784446838,
+        "stop_speed_mps": 6.247010837040603e-06
+      }
+    },
+    {
+      "segment": 2,
+      "direction": -1,
+      "reference_indices": [
+        456,
+        1265
+      ],
+      "reference_length_m": 7.068892920278649,
+      "completed": true,
+      "completion_percent": 99.89262027278113,
+      "rms_cte_m": 0.008723712512971164,
+      "max_abs_cte_m": 0.014142493371415986,
+      "max_abs_heading_deg": 0.7762672470630194,
+      "minimum_signed_speed_mps": -0.21828395166380818,
+      "maximum_signed_speed_mps": -2.5641041090733163e-06,
+      "end_event": {
+        "segment": 2,
+        "direction": -1,
+        "start_time_s": 29.091666666665336,
+        "end_time_s": 66.52500000002166,
+        "actual_pose": [
+          10.372569118117097,
+          15.173920471162168,
+          -1.53471032058627
+        ],
+        "reference_pose": [
+          10.36691614921876,
+          15.181294704266078,
+          -1.531564110915057
+        ],
+        "progress_percent": 99.89262027278113,
+        "stop_speed_mps": -2.5783631643598066e-05
+      }
+    }
+  ],
+  "gear_engagement_events": [
+    {
+      "time_s": 2.8458333333333696,
+      "from_gear": 0,
+      "to_gear": -1,
+      "actual_speed_before_mps": 9.816099511561601e-06,
+      "actual_speed_after_command_mps": 9.816099511561601e-06,
+      "requested_motor_speed_mps": -0.02,
+      "target_speed_mps": 0.0,
+      "state": "SHIFT_TO_REVERSE"
+    },
+    {
+      "time_s": 19.51666666666588,
+      "from_gear": -1,
+      "to_gear": 1,
+      "actual_speed_before_mps": 6.837877163922217e-05,
+      "actual_speed_after_command_mps": 6.837877163922217e-05,
+      "requested_motor_speed_mps": 0.02,
+      "target_speed_mps": 0.0,
+      "state": "SHIFT_TO_FORWARD"
+    },
+    {
+      "time_s": 29.08749999999867,
+      "from_gear": 1,
+      "to_gear": -1,
+      "actual_speed_before_mps": -5.973316834072238e-05,
+      "actual_speed_after_command_mps": -5.973316834072238e-05,
+      "requested_motor_speed_mps": -0.02,
+      "target_speed_mps": 0.0,
+      "state": "SHIFT_TO_REVERSE"
+    }
+  ],
+  "shift_events": [
+    {
+      "from_segment": 0,
+      "to_segment": 1,
+      "from_direction": -1,
+      "to_direction": 1,
+      "start_time_s": 17.537499999999326,
+      "entry_speed_mps": -7.677840991047738e-06,
+      "original_recorded_hold_s": 0.6000000000000014,
+      "end_time_s": 19.520833333332547,
+      "duration_s": 1.9833333333332206,
+      "engagement_speed_mps": 0.0026570759943177033,
+      "actual_direction": 1
+    },
+    {
+      "from_segment": 1,
+      "to_segment": 2,
+      "from_direction": 1,
+      "to_direction": -1,
+      "start_time_s": 27.3958333333321,
+      "entry_speed_mps": 6.253044866968782e-06,
+      "original_recorded_hold_s": 0.6000000000000014,
+      "end_time_s": 29.091666666665336,
+      "duration_s": 1.695833333333237,
+      "engagement_speed_mps": -0.0032858720311901967,
+      "actual_direction": -1
+    }
+  ],
+  "state_transitions": [
+    {
+      "time_s": 2.8500000000000365,
+      "from_state": "SHIFT_TO_REVERSE",
+      "to_state": "REVERSE",
+      "actual_speed_mps": -0.002717059437990717,
+      "target_speed_mps": 0.0,
+      "gear": -1
+    },
+    {
+      "time_s": 16.68333333333271,
+      "from_state": "REVERSE",
+      "to_state": "DECELERATING",
+      "actual_speed_mps": -0.16945629743086923,
+      "target_speed_mps": 0.0,
+      "gear": -1
+    },
+    {
+      "time_s": 17.237499999999343,
+      "from_state": "DECELERATING",
+      "to_state": "STOPPED",
+      "actual_speed_mps": -1.4685558704166142e-05,
+      "target_speed_mps": 0.0,
+      "gear": -1
+    },
+    {
+      "time_s": 17.537499999999326,
+      "from_state": "STOPPED",
+      "to_state": "SHIFT_TO_FORWARD",
+      "actual_speed_mps": -7.677840991047738e-06,
+      "target_speed_mps": 0.0,
+      "gear": -1
+    },
+    {
+      "time_s": 19.520833333332547,
+      "from_state": "SHIFT_TO_FORWARD",
+      "to_state": "FORWARD",
+      "actual_speed_mps": 0.0026570759943177033,
+      "target_speed_mps": 0.0,
+      "gear": 1
+    },
+    {
+      "time_s": 26.524999999998816,
+      "from_state": "FORWARD",
+      "to_state": "DECELERATING",
+      "actual_speed_mps": 0.2166384612764719,
+      "target_speed_mps": 0.0,
+      "gear": 1
+    },
+    {
+      "time_s": 27.095833333332116,
+      "from_state": "DECELERATING",
+      "to_state": "STOPPED",
+      "actual_speed_mps": 6.247010837040603e-06,
+      "target_speed_mps": 0.0,
+      "gear": 1
+    },
+    {
+      "time_s": 27.3958333333321,
+      "from_state": "STOPPED",
+      "to_state": "SHIFT_TO_REVERSE",
+      "actual_speed_mps": 6.253044866968782e-06,
+      "target_speed_mps": 0.0,
+      "gear": 1
+    },
+    {
+      "time_s": 29.091666666665336,
+      "from_state": "SHIFT_TO_REVERSE",
+      "to_state": "REVERSE",
+      "actual_speed_mps": -0.0032858720311901967,
+      "target_speed_mps": 0.0,
+      "gear": -1
+    },
+    {
+      "time_s": 65.97500000002216,
+      "from_state": "REVERSE",
+      "to_state": "DECELERATING",
+      "actual_speed_mps": -0.16686826373751776,
+      "target_speed_mps": 0.0,
+      "gear": -1
+    },
+    {
+      "time_s": 66.52500000002166,
+      "from_state": "DECELERATING",
+      "to_state": "FINAL_BRAKING",
+      "actual_speed_mps": -2.5783631643598066e-05,
+      "target_speed_mps": 0.0,
+      "gear": -1
+    },
+    {
+      "time_s": 68.5291666666865,
+      "from_state": "FINAL_BRAKING",
+      "to_state": "COMPLETE",
+      "actual_speed_mps": -3.5036590145122096e-05,
+      "target_speed_mps": 0.0,
+      "gear": -1
+    }
+  ],
+  "interactive_events": [],
+  "collision_events": [],
+  "reference_final_position_error_m": 0.009241847831712328,
+  "reference_final_heading_error_deg": 0.18028350767988477,
+  "bay_goal_position_error_m": 0.1792197426276538,
+  "bay_goal_heading_error_deg": 2.0675568831810454,
+  "final_state": {
+    "x": 10.372567130057105,
+    "y": 15.173981827478576,
+    "z": 0.7199899420353283,
+    "yaw": -1.5347106517111155,
+    "speed": -2.4151734027379846e-05,
+    "steering": 0.008362299300169174,
+    "roll": -9.555809866640898e-08,
+    "pitch": 5.447635072698128e-09,
+    "direction": -1,
+    "phase": "STOPPED",
+    "steering_joints": [
+      0.008383197831857682,
+      0.008341400768480665
+    ]
+  },
+  "body_corners_xy": [
+    [
+      9.437075201704355,
+      16.14086075060538
+    ],
+    [
+      9.599425499452316,
+      11.643790328561588
+    ],
+    [
+      11.398253668269835,
+      11.708730447660773
+    ],
+    [
+      11.235903370521871,
+      16.205800869704568
+    ]
+  ],
+  "body_bay_margins_m": {
+    "left": 0.23707520170435536,
+    "right": 0.40174633173016616,
+    "entrance": 0.8437903285615871,
+    "back": 0.7941991302954321
+  },
+  "final_tire_collision_aabbs": [
+    {
+      "link": 0,
+      "min": [
+        11.057108039367911,
+        14.783647081862483,
+        -0.09587001381741667
+      ],
+      "max": [
+        11.28698452497305,
+        15.622040923811035,
+        0.7358497435199236
+      ]
+    },
+    {
+      "link": 1,
+      "min": [
+        9.461395086539621,
+        14.815820350303678,
+        -0.005913479720616344
+      ],
+      "max": [
+        9.684780733264041,
+        15.47441855399665,
+        0.6458935139641537
+      ]
+    },
+    {
+      "link": 3,
+      "min": [
+        11.149776189154595,
+        12.05566100756147,
+        -0.12494535023915243
+      ],
+      "max": [
+        11.389136733753626,
+        12.953542491705333,
+        0.7649250537569685
+      ]
+    },
+    {
+      "link": 5,
+      "min": [
+        9.552142570533285,
+        12.027328094461396,
+        -0.09552786388663115
+      ],
+      "max": [
+        9.788853607837638,
+        12.866426303432217,
+        0.735507871945477
+      ]
+    }
+  ],
+  "final_hold_valid": true,
+  "max_abs_cte_m": 0.014142493371415986,
+  "max_abs_heading_error_deg": 0.7762672470630194,
+  "max_abs_roll_deg": 0.00010740362228920992,
+  "max_abs_pitch_deg": 1.0932897414556219e-05,
+  "painted_line_crossing_samples": 2512,
+  "collision_policy": "Painted bay lines may be crossed during approach; final full-body containment and clearance are mandatory. Peripheral scenery has no collision shapes and is excluded.",
+  "effective_obstacles": [
+    [
+      7.4,
+      11.5,
+      9.2,
+      16.0
+    ],
+    [
+      11.8,
+      11.5,
+      13.6,
+      16.0
+    ]
+  ],
+  "background_collision_enabled": false,
+  "forbidden_vehicle_motion_api_calls": [],
+  "reference_source": {
+    "source": "D:\\ParkingPlanner\\results\\p10_4_2_execution_trajectory.npz",
+    "source_sha256": "60838faf41e82ad1d8e6000dc40763bb3059eb52e700e9a68fc1177bc3ec6b3d",
+    "record_columns": [
+      "time_s",
+      "segment_index",
+      "direction",
+      "true_x",
+      "true_y",
+      "true_yaw",
+      "estimate_x",
+      "estimate_y",
+      "estimate_yaw",
+      "speed_mps",
+      "target_speed_mps",
+      "steering_deg",
+      "cross_track_error_m",
+      "position_error_m",
+      "heading_error_deg"
+    ],
+    "initial_dt_s": 0.04999999999999716,
+    "absolute_initial_time_s": 20.500000000000004,
+    "duplicate_timestamps": 3,
+    "gear_phase_saved": false,
+    "mode": "P10.4.2 recorded physical trajectory",
+    "note": "Steering converted degrees to radians; body yaw unchanged in reverse; no resampling or sample removal."
+  },
+  "reference_samples": 1266,
+  "reference_unchanged": true,
+  "vehicle_parameters": {
+    "chassis_mass_kg": 1100.0,
+    "wheel_mass_kg": 18.0,
+    "knuckle_mass_kg": 2.0,
+    "wheel_radius_m": 0.32,
+    "wheel_width_m": 0.2,
+    "chassis_height_m": 0.55,
+    "chassis_com_height_m": 0.72,
+    "tire_lateral_friction": 1.2,
+    "tire_rolling_friction": 0.002,
+    "tire_spinning_friction": 0.001,
+    "drive_force_nm": 160.0,
+    "brake_force_nm": 300.0,
+    "steering_force_nm": 180.0,
+    "steering_rate_rad_s": 1.2,
+    "max_steering_rad": 0.6108652381980153,
+    "max_speed_mps": 1.0,
+    "shift_stop_speed_mps": 0.035,
+    "shift_hold_s": 0.35,
+    "length_m": 4.5,
+    "width_m": 1.8,
+    "wheelbase_m": 2.7,
+    "track_width_m": 1.6,
+    "total_mass_kg": 1176.0,
+    "chassis_inertia_kg_m2": [
+      324.72916666666674,
+      1883.9791666666665,
+      2153.2500000000005
+    ]
+  },
+  "reverse_sign_checks": {
+    "cases": [
+      {
+        "case": "straight",
+        "passed": true,
+        "completed": true,
+        "yaw_change_deg": 0.13476953085993917,
+        "initial_cte_m": 0.040020088002988174,
+        "final_cte_m": 0.002856658575529636,
+        "max_abs_cte_m": 0.040022123555595535,
+        "min_signed_speed_mps": -0.20221906783749585,
+        "obstacle_contact_samples": 0,
+        "role": "isolated sign diagnostic, not parking trajectory"
+      },
+      {
+        "case": "left_steer",
+        "passed": true,
+        "completed": true,
+        "yaw_change_deg": -10.618617295463283,
+        "initial_cte_m": 0.04004470655829054,
+        "final_cte_m": 0.003154560752605583,
+        "max_abs_cte_m": 0.04004470731221733,
+        "min_signed_speed_mps": -0.20255902588090333,
+        "obstacle_contact_samples": 0,
+        "role": "isolated sign diagnostic, not parking trajectory"
+      },
+      {
+        "case": "right_steer",
+        "passed": true,
+        "completed": true,
+        "yaw_change_deg": 10.917236282271652,
+        "initial_cte_m": 0.0399428256256311,
+        "final_cte_m": 0.0015804545766394675,
+        "max_abs_cte_m": 0.0399428256256311,
+        "min_signed_speed_mps": -0.20267501904807492,
+        "obstacle_contact_samples": 0,
+        "role": "isolated sign diagnostic, not parking trajectory"
+      }
+    ],
+    "all_passed": true,
+    "fixture_note": "The first diagnostic draft passed steering in the acceleration positional slot. Corrected to explicit AckermannModel acceleration/steering keywords before validating reverse logic. No parking reference was generated or changed."
+  },
+  "protocol_sha256": "59d9d8fa2277ef39d431d0d58c4c032eef47f10a700cf899eae83cbc26f0b71b",
+  "protected_sha256": {
+    "results\\p10_1_slam_map_planning.png": "b21ca4551b66f1db882b36bda880b272579c522b1096463f2e2353be1fa026f3",
+    "results\\p10_1_slam_map_planning_metrics.json": "9a140961ecaa2d29bec837fa67e622f8a4d7ef9804173382ff224ebed02aae2f",
+    "results\\p10_1_slam_map_planning_path.npz": "1dc9016b5b468695bce608864402b6b5c17b4ba383924b0ff09d49b3e35eaed7",
+    "results\\p10_2_slam_feedback.png": "70879a14754f8265b70068f7cb57dcdbca6276a9d1e13df232a4fbbe5395eae2",
+    "results\\p10_2_slam_feedback_metrics.json": "995a2ff9503af796ba0b2fff1fa2c9efedba093ea0f842d20dd9e64ba0e59c1e",
+    "results\\p10_3_full_autonomous_parking.png": "019d7379b4cf7fbff498426be35f7fe75a4c681a2025d471da091eed103491cc",
+    "results\\p10_3_full_autonomous_parking_metrics.json": "63fe94a57e39e90de70ba3d0bbf7b94ce46ef86894e60f9cf470be1047fba99c",
+    "results\\p10_4_1_exploration_map.npz": "8b349864ed3c6bd90b94b56b5c31c3d011107e15a2ed330c29bf0fa5fef1db74",
+    "results\\p10_4_1_explore_select_plan.png": "abddce6ffb20d70035448a90c99b5241a4835ac45b854e42b5088a1dc1da2f1b",
+    "results\\p10_4_1_live_plan.npz": "f7d58a5a77c517f8d4e1fe20c3d9083800e5b1a7b656a8d08226c0e1703e6f52",
+    "results\\p10_4_1_metrics.json": "8bde0833b23f6708309c92db3b57ba518549d011cbc04792fab3f00292571f0c",
+    "results\\p10_4_2_autonomous_execution.png": "c71c2b43220aba6b0e702a4549a601e9aa47ac3e4a22724e556af63c53c03448",
+    "results\\p10_4_2_execution_map.npz": "0ea666fb166bbaf2534d3613da94c4df294d524e697f409febba56955dfb5f02",
+    "results\\p10_4_2_execution_metrics.json": "7f08a1e295dbd0b57e3289b794826511fb95d423059426a5d89bbbcc3c67bec7",
+    "results\\p10_4_2_execution_trajectory.npz": "60838faf41e82ad1d8e6000dc40763bb3059eb52e700e9a68fc1177bc3ec6b3d",
+    "results\\p11_4_1_attempt01_metrics.json": "87ed6456258466f4a767b6befd4b387a998f376f52612c4b0a5c9c5d78229b0e",
+    "results\\p11_4_1_attempt01_trace.npz": "e4ad7730a1842f6c09777b232520949776df95cf9d8025181d3cfe1e624414e2",
+    "results\\p11_4_1_forward_tracking.png": "45ee98639a89790845c76b09c9e7ae0cd783042ae3cff74e805584a3d4556348",
+    "results\\p11_4_1_forward_tracking_metrics.json": "ebb1482fcd7c9737f286b29a647c6d148a4d38efbd6c571c15293e6bfe4a1a0d",
+    "results\\p11_4_1_forward_tracking_report.md": "d130ec2b8c83c8b5edc6b9660854265fe163c703e9f82a375b99f6601df39c10",
+    "results\\p11_4_1_forward_tracking_trace.npz": "ae5160f369a4da5e161ca9678e1513e79a039636bee901c9012f348d2feb9bdf",
+    "parking_planner\\simulation\\pybullet\\physics_vehicle.py": "b8f9674ec6061468473ead9d096ec228406635d7a4e2e14ecd09215680945f6e",
+    "parking_planner\\simulation\\pybullet\\forward_tracker.py": "6deaa3fb86e3e028625c6982a1e2ee9ca68164c462f55671d79c1e55ddede80d",
+    "parking_planner\\control\\stanley_controller.py": "c82aaf64b3ebac3309456046be5c4ebfb913df09986a9bab46ae44b4dc24f19a",
+    "parking_planner\\control\\speed_controller.py": "07f058a2ba7d8e5bd7f7b797210cb4914953ddf7c2d16149e2b02c9764e1a584"
+  },
+  "gui_run": true
+}
