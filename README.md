@@ -39,15 +39,54 @@ AutoMotion-SLAMPark is a modular autonomous parking system built with Python and
 
 ```mermaid
 flowchart TD
-    A[PyBullet 3D parking scene + physics vehicle] --> B[Dual LiDAR + wheel encoder + IMU]
-    B --> C[Point-to-Line ICP scan matching]
-    C --> D[Fresh Local SLAM occupancy grid]
-    D --> E[Map-based parking-bay recognition]
-    E --> F[Hybrid A* with footprint & swept-volume collision check]
-    F --> G[Continuous clearance & error-envelope safety audit]
-    G --> H[Direction-aware Stanley + PID + gear state machine]
-    H --> I[Wheel-driven physical execution]
-    I --> J[Independent parking validation]
+    HA["Hybrid A* (Ackermann primitives, full-footprint collision)"]
+    PATH["Planned path (forward / reverse segments)"]
+    AUDIT["Continuous swept-volume & clearance safety audit"]
+    SC["Stanley lateral controller"]
+    PID["PID speed control & gear state machine"]
+    PV["PyBullet physics vehicle (wheel-driven rigid body)"]
+    ENV["3D PyBullet parking scene"]
+    SEN["Dual LiDAR + wheel encoder + IMU"]
+    SCAN["LiDAR scans"]
+    ODOM["Encoder / IMU odometry prior"]
+    ICP["Point-to-Line ICP scan matching"]
+    POSE["SLAM pose estimate"]
+    OGM["Occupancy grid mapping"]
+    MAP["Fresh local SLAM map"]
+    CUR["Current estimated vehicle pose"]
+    CONV["Planner grid conversion & obstacle inflation (error envelope)"]
+    BAY["Parking-bay recognition from map boundaries"]
+    GOAL["Target parking pose"]
+    VIS["3D visualization & HUD"]
+    VAL["Independent physical parking validation"]
+
+    HA --> PATH
+    PATH --> AUDIT
+    AUDIT -->|execution gate| SC
+    AUDIT -->|execution gate| PID
+    SC --> PV
+    PID --> PV
+    ENV -->|ground & obstacle contact| PV
+    PV --> SEN
+    ENV -->|ray obstacles| SEN
+    SEN --> SCAN
+    SEN --> ODOM
+    SCAN --> ICP
+    ODOM --> ICP
+    ICP --> POSE
+    POSE --> OGM
+    OGM --> MAP
+    POSE --> CUR
+    MAP --> CONV
+    MAP --> BAY
+    BAY --> GOAL
+    CONV --> HA
+    GOAL --> HA
+    CUR --> HA
+    ENV --> VIS
+    MAP --> VIS
+    POSE --> VIS
+    PV -->|physical trace| VAL
 ```
 
 ## Technology Stack
