@@ -46,10 +46,6 @@
 
 ![P6 控制器对比](results/p6_controller_comparison.png)
 
-**多场景鲁棒性（P8，5/5 PASS）**
-
-![P8 鲁棒性轨迹](results/p8_robustness_trajectories.png)
-
 **增量式 SLAM 建图（P9.5.3）**
 
 ![P9.5.3 SLAM 地图](results/p9_5_3_keyboard_exploration.png)
